@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html ng-app="friendsList" ng-controller="mainCtrl">
+<html lang="en" ng-app="friendsList">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title></title>
+    <title>Babies First Angular Project</title>
   </head>
-  <body>
-
-    <h1>My Friends</h1>
-    <div ng-repeat="friend in friends">
-      <p> {{friends}} </p>
+  <body ng-controller="mainCtrl">
+    <h1>My Name</h1>
+    <div>
+      <!-- use {{}} to data bind  -->
+      <p> {{name}} </p>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="js/apps.js"></script>
-    <script src"js/mainCtrl.js"></script>
+    <h1>My Friends</h1>
+    <!-- ng-repeat it is universal - it acts like a for-in loop. It is repeating this <p> tag 3 times since there are 3 items in the 'friends' array -->
+    <div ng-repeat="friend in friends">
+          <p> {{friend}} </p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js" charset="UTF-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/mainCtrl.js" charset="utf-8"></script>
   </body>
 </html>
